@@ -1,863 +1,1342 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webinova - Agence Web Tunisienne 360° | Sites Web, Apps Mobile, SEO</title>
-    <meta name="description" content="Agence digitale tunisienne spécialisée en création de sites web, applications mobiles, SEO et campagnes sponsorisées. Tarifs compétitifs, résultats premium.">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>
+      Webinova | Agence Web Tunisienne 360° - Création Sites Web & Apps Mobile
+    </title>
+    <meta
+      name="title"
+      content="Webinova | Agence Web Tunisienne 360° - Création Sites Web & Apps Mobile"
+    />
+    <meta
+      name="description"
+      content="Agence digitale à Tunis spécialisée en création de sites web, applications mobiles, SEO et publicité en ligne. Solutions sur mesure pour booster votre visibilité en Tunisie."
+    />
+    <meta
+      name="keywords"
+      content="agence web Tunisie, création site web Tunisie, développement application mobile Tunisie, SEO Tunisie, marketing digital Tunisie, agence digitale Tunis, Webinova, campagne publicitaire en ligne, site e-commerce Tunisie"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.webinova.tn/" />
+    <meta
+      property="og:title"
+      content="Webinova | Agence Web Tunisienne 360° - Création Sites Web & Apps Mobile"
+    />
+    <meta
+      property="og:description"
+      content="Agence digitale à Tunis spécialisée en création de sites web, applications mobiles, SEO et publicité en ligne. Solutions sur mesure pour booster votre visibilité en Tunisie."
+    />
+    <meta
+      property="og:image"
+      content="https://www.webinova.tn/images/webinova-preview.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.webinova.tn/" />
+    <meta
+      property="twitter:title"
+      content="Webinova | Agence Web Tunisienne 360° - Création Sites Web & Apps Mobile"
+    />
+    <meta
+      property="twitter:description"
+      content="Agence digitale à Tunis spécialisée en création de sites web, applications mobiles, SEO et publicité en ligne. Solutions sur mesure pour booster votre visibilité en Tunisie."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.webinova.tn/images/webinova-preview.jpg"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.webinova.tn/" />
+
+    <!-- Geo Tags for Tunisia -->
+    <meta name="geo.region" content="TN" />
+    <meta name="geo.placename" content="Tunis" />
+    <meta name="geo.position" content="36.8065;10.1815" />
+    <meta name="ICBM" content="36.8065, 10.1815" />
+
+    <!-- Language Tags -->
+    <meta name="language" content="French" />
+    <meta http-equiv="Content-Language" content="fr" />
+    <meta name="country" content="Tunisia" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'catskill-white': '#f2f9f8',
-                        'pacific-blue': '#0996c1',
-                        'tarawera': '#073e59',
-                        'science-blue': '#065fcd',
-                        'blumine': '#196583',
-                        'scooter': '#33beca',
-                        'hippie-blue': '#6a9db3',
-                        'catalina-blue': '#06367c',
-                        'azure-radiance': '#0c74e6',
-                        'nepal': '#8c9cc2',
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 1s ease-in-out',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'float': 'float 3s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "catskill-white": "#f2f9f8",
+              "pacific-blue": "#0996c1",
+              tarawera: "#073e59",
+              "science-blue": "#065fcd",
+              blumine: "#196583",
+              scooter: "#33beca",
+              "hippie-blue": "#6a9db3",
+              "catalina-blue": "#06367c",
+              "azure-radiance": "#0c74e6",
+              nepal: "#8c9cc2",
+            },
+            animation: {
+              "fade-in": "fadeIn 1s ease-in-out",
+              "slide-up": "slideUp 0.8s ease-out",
+              float: "float 3s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+          },
+        },
+      };
     </script>
-    
+
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        .hero-gradient {
-            background: linear-gradient(135deg, #06367c 0%, #065fcd 100%);
-        }
-        
-        .testimonial-card {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .project-card:hover .project-overlay {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .project-overlay {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.3s ease;
-        }
+      body {
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .hero-gradient {
+        background: linear-gradient(135deg, #06367c 0%, #065fcd 100%);
+      }
+
+      .testimonial-card {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-card:hover .project-overlay {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .project-overlay {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+      }
     </style>
-</head>
-<body class="bg-catskill-white">
+  </head>
+  <body class="bg-catskill-white">
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <a href="#" class="text-2xl font-bold text-tarawera flex items-center">
-                        <span class="bg-scooter text-white p-2 rounded mr-2">
-                            <i class="fas fa-rocket"></i>
-                        </span>
-                        WEBINOVA
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#services" class="text-blumine hover:text-scooter transition">Services</a>
-                    <a href="#apropos" class="text-blumine hover:text-scooter transition">À propos</a>
-                    <a href="#portfolio" class="text-blumine hover:text-scooter transition">Portfolio</a>
-                    <a href="#temoignages" class="text-blumine hover:text-scooter transition">Témoignages</a>
-                    <a href="#contact" class="text-blumine hover:text-scooter transition">Contact</a>
-                    <a href="#contact" class="bg-scooter text-white px-4 py-2 rounded-md hover:bg-pacific-blue transition flex items-center">
-                        <i class="fas fa-paper-plane mr-2"></i> Devis
-                    </a>
-                </div>
-                <div class="md:hidden">
-                    <button id="menu-btn" class="text-blumine focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <a href="#services" class="block py-2 text-blumine hover:text-scooter">Services</a>
-                <a href="#apropos" class="block py-2 text-blumine hover:text-scooter">À propos</a>
-                <a href="#portfolio" class="block py-2 text-blumine hover:text-scooter">Portfolio</a>
-                <a href="#temoignages" class="block py-2 text-blumine hover:text-scooter">Témoignages</a>
-                <a href="#contact" class="block py-2 text-blumine hover:text-scooter">Contact</a>
-                <a href="#contact" class="inline-block bg-scooter text-white px-4 py-2 rounded-md mt-2 hover:bg-pacific-blue transition">
-                    Devis gratuit
-                </a>
-            </div>
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <a
+              href="#"
+              class="text-2xl font-bold text-tarawera flex items-center"
+            >
+              <span class="bg-scooter text-white p-2 rounded mr-2">
+                <i class="fas fa-rocket"></i>
+              </span>
+              WEBINOVA
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#services"
+              class="text-blumine hover:text-scooter transition"
+              >Services</a
+            >
+            <a
+              href="#apropos"
+              class="text-blumine hover:text-scooter transition"
+              >À propos</a
+            >
+            <a
+              href="#portfolio"
+              class="text-blumine hover:text-scooter transition"
+              >Portfolio</a
+            >
+            <a
+              href="#temoignages"
+              class="text-blumine hover:text-scooter transition"
+              >Témoignages</a
+            >
+            <a
+              href="#contact"
+              class="text-blumine hover:text-scooter transition"
+              >Contact</a
+            >
+            <a
+              href="#contact"
+              class="bg-scooter text-white px-4 py-2 rounded-md hover:bg-pacific-blue transition flex items-center"
+            >
+              <i class="fas fa-paper-plane mr-2"></i> Devis
+            </a>
+          </div>
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-blumine focus:outline-none">
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+          <a href="#services" class="block py-2 text-blumine hover:text-scooter"
+            >Services</a
+          >
+          <a href="#apropos" class="block py-2 text-blumine hover:text-scooter"
+            >À propos</a
+          >
+          <a
+            href="#portfolio"
+            class="block py-2 text-blumine hover:text-scooter"
+            >Portfolio</a
+          >
+          <a
+            href="#temoignages"
+            class="block py-2 text-blumine hover:text-scooter"
+            >Témoignages</a
+          >
+          <a href="#contact" class="block py-2 text-blumine hover:text-scooter"
+            >Contact</a
+          >
+          <a
+            href="#contact"
+            class="inline-block bg-scooter text-white px-4 py-2 rounded-md mt-2 hover:bg-pacific-blue transition"
+          >
+            Devis gratuit
+          </a>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero-gradient text-white py-20 md:py-32">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right" data-aos-duration="800">
-                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6 animate-fade-in">
-                    Transformez votre présence digitale avec <span class="text-scooter">Webinova</span>
-                </h1>
-                <p class="text-xl mb-8 opacity-90 animate-fade-in">
-                    Agence tunisienne 360° spécialisée en création de sites web haut de gamme, 
-                    applications mobiles performantes et stratégies digitales sur mesure.
-                </p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-slide-up">
-                    <a href="#contact" class="bg-white text-science-blue px-8 py-3 rounded-md font-semibold hover:bg-opacity-90 transition flex items-center justify-center">
-                        <i class="fas fa-envelope mr-2"></i> Contactez-nous
-                    </a>
-                    <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-science-blue transition flex items-center justify-center">
-                        <i class="fas fa-list-ul mr-2"></i> Nos services
-                    </a>
-                </div>
-                
-                <div class="mt-10 flex items-center space-x-6 animate-slide-up">
-                    <div class="flex -space-x-2">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
-                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
-                    </div>
-                    <div>
-                        <p class="font-medium">+50 clients satisfaits</p>
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span class="text-white ml-2">5.0</span>
-                        </div>
-                    </div>
-                </div>
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+      >
+        <div
+          class="md:w-1/2 mb-10 md:mb-0"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        >
+          <h1
+            class="text-4xl md:text-5xl font-bold leading-tight mb-6 animate-fade-in"
+          >
+            Transformez votre présence digitale avec
+            <span class="text-scooter">Webinova</span>
+          </h1>
+          <p class="text-xl mb-8 opacity-90 animate-fade-in">
+            Agence tunisienne 360° spécialisée en création de sites web haut de
+            gamme, applications mobiles performantes et stratégies digitales sur
+            mesure.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-slide-up"
+          >
+            <a
+              href="#contact"
+              class="bg-white text-science-blue px-8 py-3 rounded-md font-semibold hover:bg-opacity-90 transition flex items-center justify-center"
+            >
+              <i class="fas fa-envelope mr-2"></i> Contactez-nous
+            </a>
+            <a
+              href="#services"
+              class="border-2 border-white text-white px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-science-blue transition flex items-center justify-center"
+            >
+              <i class="fas fa-list-ul mr-2"></i> Nos services
+            </a>
+          </div>
+
+          <div class="mt-10 flex items-center space-x-6 animate-slide-up">
+            <div class="flex -space-x-2">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                class="w-10 h-10 rounded-full border-2 border-white"
+                alt="Client"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                class="w-10 h-10 rounded-full border-2 border-white"
+                alt="Client"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                class="w-10 h-10 rounded-full border-2 border-white"
+                alt="Client"
+              />
             </div>
-            <div class="md:w-1/2 flex justify-center animate-float" data-aos="fade-left" data-aos-duration="800">
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                         alt="Équipe Webinova travaillant sur un projet digital" 
-                         class="rounded-lg shadow-2xl w-full max-w-md border-4 border-white">
-                    <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg">
-                        <div class="text-science-blue text-2xl font-bold">+150</div>
-                        <div class="text-tarawera text-sm">Projets réalisés</div>
-                    </div>
-                </div>
+            <div>
+              <p class="font-medium">+50 clients satisfaits</p>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="text-white ml-2">5.0</span>
+              </div>
             </div>
+          </div>
         </div>
+        <div
+          class="md:w-1/2 flex justify-center animate-float"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        >
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+              alt="Équipe Webinova travaillant sur un projet digital"
+              class="rounded-lg shadow-2xl w-full max-w-md border-4 border-white"
+            />
+            <div
+              class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg"
+            >
+              <div class="text-science-blue text-2xl font-bold">+150</div>
+              <div class="text-tarawera text-sm">Projets réalisés</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Clients Logo -->
     <section class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <p class="text-center text-blumine mb-8">Ils nous font confiance :</p>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
-                <img src="https://via.placeholder.com/120x60?text=Client+1" alt="Client Logo" class="h-8 md:h-10">
-                <img src="https://via.placeholder.com/120x60?text=Client+2" alt="Client Logo" class="h-8 md:h-10">
-                <img src="https://via.placeholder.com/120x60?text=Client+3" alt="Client Logo" class="h-8 md:h-10">
-                <img src="https://via.placeholder.com/120x60?text=Client+4" alt="Client Logo" class="h-8 md:h-10">
-                <img src="https://via.placeholder.com/120x60?text=Client+5" alt="Client Logo" class="h-8 md:h-10">
-            </div>
+      <div class="container mx-auto px-6">
+        <p class="text-center text-blumine mb-8">Ils nous font confiance :</p>
+        <div
+          class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70"
+        >
+          <img
+            src="https://via.placeholder.com/120x60?text=Client+1"
+            alt="Client Logo"
+            class="h-8 md:h-10"
+          />
+          <img
+            src="https://via.placeholder.com/120x60?text=Client+2"
+            alt="Client Logo"
+            class="h-8 md:h-10"
+          />
+          <img
+            src="https://via.placeholder.com/120x60?text=Client+3"
+            alt="Client Logo"
+            class="h-8 md:h-10"
+          />
+          <img
+            src="https://via.placeholder.com/120x60?text=Client+4"
+            alt="Client Logo"
+            class="h-8 md:h-10"
+          />
+          <img
+            src="https://via.placeholder.com/120x60?text=Client+5"
+            alt="Client Logo"
+            class="h-8 md:h-10"
+          />
         </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="py-20 bg-catskill-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-scooter font-semibold">NOS SERVICES</span>
-                <h2 class="text-3xl font-bold text-tarawera mt-2">Solutions digitales complètes</h2>
-                <p class="text-blumine max-w-2xl mx-auto mt-4">
-                    Nous offrons une gamme complète de services pour couvrir tous vos besoins digitaux, 
-                    de la conception à la mise en œuvre et au suivi.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-pacific-blue mb-4 text-4xl">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-tarawera mb-2">Sites Web Premium</h3>
-                    <p class="text-blumine mb-4">
-                        Création de sites web modernes, responsives et performants avec des technologies à la pointe.
-                    </p>
-                    <ul class="text-blumine text-sm space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-scooter mr-2 mt-1"></i>
-                            <span>Sites vitrine & corporate</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-scooter mr-2 mt-1"></i>
-                            <span>E-commerce</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-scooter mr-2 mt-1"></i>
-                            <span>Applications web</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-pacific-blue mb-4 text-4xl">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-tarawera mb-2">Apps Mobiles</h3>
-                    <p class="text-blumine mb-4">
-                        Développement d'applications mobiles natives et cross-platform pour iOS et Android.
-                    </p>
-                    <ul class="text-blumine text-sm space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-scooter mr-2 mt-1"></i>
-                            <span>Applications natives</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-scooter mr-2 mt-1"></i>
-                            <span>Applications hybrides</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-scooter mr-2 mt-1"></i>
-                            <span>UI/UX optimisée</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-pacific-blue mb-4 text-4xl">
-                        <i class="fas fa-search-location"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-tarawera mb-2">SEO & Visibilité</h3>
-                    <p class="text-blumine mb-4">
-                        Optimisation pour les moteurs de recherche pour améliorer votre visibilité et votre trafic organique.
-                    </p>
-                    <ul class="text-blumine text-sm space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-scooter mr-2 mt-1"></i>
-                            <span>Audit technique SEO</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-scooter mr-2 mt-1"></i>
-                            <span>Optimisation on-page</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-scooter mr-2 mt-1"></i>
-                            <span>Stratégie de contenu</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="service-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-pacific-blue mb-4 text-4xl">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-tarawera mb-2">Publicité Digitale</h3>
-                    <p class="text-blumine mb-4">
-                        Campagnes publicitaires performantes sur les réseaux sociaux et Google Ads.
-                    </p>
-                    <ul class="text-blumine text-sm space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-scooter mr-2 mt-1"></i>
-                            <span>Facebook & Instagram Ads</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-scooter mr-2 mt-1"></i>
-                            <span>Google Ads</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-scooter mr-2 mt-1"></i>
-                            <span>Suivi & optimisation</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="text-center mt-16" data-aos="fade-up">
-                <a href="#contact" class="inline-flex items-center bg-scooter text-white px-8 py-3 rounded-md font-medium hover:bg-pacific-blue transition">
-                    <i class="fas fa-paper-plane mr-2"></i> Parlez-nous de votre projet
-                </a>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="text-scooter font-semibold">NOS SERVICES</span>
+          <h2 class="text-3xl font-bold text-tarawera mt-2">
+            Solutions digitales complètes
+          </h2>
+          <p class="text-blumine max-w-2xl mx-auto mt-4">
+            Nous offrons une gamme complète de services pour couvrir tous vos
+            besoins digitaux, de la conception à la mise en œuvre et au suivi.
+          </p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="service-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="text-pacific-blue mb-4 text-4xl">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-tarawera mb-2">
+              Sites Web Premium
+            </h3>
+            <p class="text-blumine mb-4">
+              Création de sites web modernes, responsives et performants avec
+              des technologies à la pointe.
+            </p>
+            <ul class="text-blumine text-sm space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check text-scooter mr-2 mt-1"></i>
+                <span>Sites vitrine & corporate</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-scooter mr-2 mt-1"></i>
+                <span>E-commerce</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-scooter mr-2 mt-1"></i>
+                <span>Applications web</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="service-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="text-pacific-blue mb-4 text-4xl">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-tarawera mb-2">
+              Apps Mobiles
+            </h3>
+            <p class="text-blumine mb-4">
+              Développement d'applications mobiles natives et cross-platform
+              pour iOS et Android.
+            </p>
+            <ul class="text-blumine text-sm space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check text-scooter mr-2 mt-1"></i>
+                <span>Applications natives</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-scooter mr-2 mt-1"></i>
+                <span>Applications hybrides</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-scooter mr-2 mt-1"></i>
+                <span>UI/UX optimisée</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="service-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="text-pacific-blue mb-4 text-4xl">
+              <i class="fas fa-search-location"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-tarawera mb-2">
+              SEO & Visibilité
+            </h3>
+            <p class="text-blumine mb-4">
+              Optimisation pour les moteurs de recherche pour améliorer votre
+              visibilité et votre trafic organique.
+            </p>
+            <ul class="text-blumine text-sm space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check text-scooter mr-2 mt-1"></i>
+                <span>Audit technique SEO</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-scooter mr-2 mt-1"></i>
+                <span>Optimisation on-page</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-scooter mr-2 mt-1"></i>
+                <span>Stratégie de contenu</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="service-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="text-pacific-blue mb-4 text-4xl">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-tarawera mb-2">
+              Publicité Digitale
+            </h3>
+            <p class="text-blumine mb-4">
+              Campagnes publicitaires performantes sur les réseaux sociaux et
+              Google Ads.
+            </p>
+            <ul class="text-blumine text-sm space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check text-scooter mr-2 mt-1"></i>
+                <span>Facebook & Instagram Ads</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-scooter mr-2 mt-1"></i>
+                <span>Google Ads</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-scooter mr-2 mt-1"></i>
+                <span>Suivi & optimisation</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center mt-16" data-aos="fade-up">
+          <a
+            href="#contact"
+            class="inline-flex items-center bg-scooter text-white px-8 py-3 rounded-md font-medium hover:bg-pacific-blue transition"
+          >
+            <i class="fas fa-paper-plane mr-2"></i> Parlez-nous de votre projet
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="apropos" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                             alt="Équipe Webinova" 
-                             class="rounded-lg shadow-xl w-full max-w-md border-4 border-white">
-                        <div class="absolute -bottom-5 -left-5 bg-scooter text-white p-6 rounded-lg shadow-lg w-64">
-                            <div class="text-3xl font-bold">10+</div>
-                            <div class="text-sm">Années d'expérience</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
-                    <span class="text-scooter font-semibold">À PROPOS DE NOUS</span>
-                    <h2 class="text-3xl font-bold text-tarawera mt-2 mb-6">L'innovation web sans limites</h2>
-                    <p class="text-blumine mb-6">
-                        Webinova est une agence digitale tunisienne qui allie créativité, expertise technique 
-                        et stratégie marketing pour offrir des solutions digitales complètes à ses clients.
-                    </p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <div class="text-scooter mr-3 mt-1">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-tarawera">Tarifs compétitifs</h4>
-                                <p class="text-blumine">Des solutions premium à des prix accessibles</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="text-scooter mr-3 mt-1">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-tarawera">Équipe d'experts</h4>
-                                <p class="text-blumine">Développeurs, designers et marketeurs qualifiés</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="text-scooter mr-3 mt-1">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-tarawera">Approche sur mesure</h4>
-                                <p class="text-blumine">Des solutions adaptées à chaque client</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="flex space-x-4">
-                        <a href="#portfolio" class="bg-scooter text-white px-6 py-2 rounded-md hover:bg-pacific-blue transition flex items-center">
-                            <i class="fas fa-eye mr-2"></i> Voir nos réalisations
-                        </a>
-                        <a href="#contact" class="border border-scooter text-scooter px-6 py-2 rounded-md hover:bg-scooter hover:text-white transition flex items-center">
-                            <i class="fas fa-phone-alt mr-2"></i> Nous contacter
-                        </a>
-                    </div>
-                </div>
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                alt="Équipe Webinova"
+                class="rounded-lg shadow-xl w-full max-w-md border-4 border-white"
+              />
+              <div
+                class="absolute -bottom-5 -left-5 bg-scooter text-white p-6 rounded-lg shadow-lg w-64"
+              >
+                <div class="text-3xl font-bold">10+</div>
+                <div class="text-sm">Années d'expérience</div>
+              </div>
             </div>
+          </div>
+          <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+            <span class="text-scooter font-semibold">À PROPOS DE NOUS</span>
+            <h2 class="text-3xl font-bold text-tarawera mt-2 mb-6">
+              L'innovation web sans limites
+            </h2>
+            <p class="text-blumine mb-6">
+              Webinova est une agence digitale tunisienne qui allie créativité,
+              expertise technique et stratégie marketing pour offrir des
+              solutions digitales complètes à ses clients.
+            </p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start">
+                <div class="text-scooter mr-3 mt-1">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-tarawera">
+                    Tarifs compétitifs
+                  </h4>
+                  <p class="text-blumine">
+                    Des solutions premium à des prix accessibles
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div class="text-scooter mr-3 mt-1">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-tarawera">Équipe d'experts</h4>
+                  <p class="text-blumine">
+                    Développeurs, designers et marketeurs qualifiés
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div class="text-scooter mr-3 mt-1">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-tarawera">
+                    Approche sur mesure
+                  </h4>
+                  <p class="text-blumine">
+                    Des solutions adaptées à chaque client
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <div class="flex space-x-4">
+              <a
+                href="#portfolio"
+                class="bg-scooter text-white px-6 py-2 rounded-md hover:bg-pacific-blue transition flex items-center"
+              >
+                <i class="fas fa-eye mr-2"></i> Voir nos réalisations
+              </a>
+              <a
+                href="#contact"
+                class="border border-scooter text-scooter px-6 py-2 rounded-md hover:bg-scooter hover:text-white transition flex items-center"
+              >
+                <i class="fas fa-phone-alt mr-2"></i> Nous contacter
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="py-16 bg-gradient-to-r from-catalina-blue to-science-blue text-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="p-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-4xl font-bold mb-2">150+</div>
-                    <div class="text-sm opacity-80">Projets réalisés</div>
-                </div>
-                <div class="p-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-4xl font-bold mb-2">50+</div>
-                    <div class="text-sm opacity-80">Clients satisfaits</div>
-                </div>
-                <div class="p-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-4xl font-bold mb-2">10+</div>
-                    <div class="text-sm opacity-80">Années d'expérience</div>
-                </div>
-                <div class="p-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-4xl font-bold mb-2">15+</div>
-                    <div class="text-sm opacity-80">Experts dédiés</div>
-                </div>
-            </div>
+    <section
+      class="py-16 bg-gradient-to-r from-catalina-blue to-science-blue text-white"
+    >
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="p-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-4xl font-bold mb-2">150+</div>
+            <div class="text-sm opacity-80">Projets réalisés</div>
+          </div>
+          <div class="p-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-4xl font-bold mb-2">50+</div>
+            <div class="text-sm opacity-80">Clients satisfaits</div>
+          </div>
+          <div class="p-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-4xl font-bold mb-2">10+</div>
+            <div class="text-sm opacity-80">Années d'expérience</div>
+          </div>
+          <div class="p-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="text-4xl font-bold mb-2">15+</div>
+            <div class="text-sm opacity-80">Experts dédiés</div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-20 bg-catskill-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-scooter font-semibold">NOS RÉALISATIONS</span>
-                <h2 class="text-3xl font-bold text-tarawera mt-2">Découvrez nos projets récents</h2>
-                <p class="text-blumine max-w-2xl mx-auto mt-4">
-                    Nous avons travaillé avec des entreprises de toutes tailles dans divers secteurs d'activité.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-aos="zoom-in">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                         alt="Site e-commerce" 
-                         class="w-full h-64 object-cover">
-                    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-tarawera to-transparent p-6 flex flex-col justify-end">
-                        <h3 class="text-xl font-semibold text-white mb-2">Plateforme E-commerce</h3>
-                        <p class="text-hippie-blue mb-4">Solution complète avec paiement en ligne et gestion de stocks</p>
-                        <a href="#" class="text-scooter font-medium hover:text-white flex items-center">
-                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                         alt="Application mobile" 
-                         class="w-full h-64 object-cover">
-                    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-tarawera to-transparent p-6 flex flex-col justify-end">
-                        <h3 class="text-xl font-semibold text-white mb-2">App Mobile de Livraison</h3>
-                        <p class="text-hippie-blue mb-4">Application avec suivi GPS en temps réel pour iOS et Android</p>
-                        <a href="#" class="text-scooter font-medium hover:text-white flex items-center">
-                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                         alt="Site corporate" 
-                         class="w-full h-64 object-cover">
-                    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-tarawera to-transparent p-6 flex flex-col justify-end">
-                        <h3 class="text-xl font-semibold text-white mb-2">Site Corporate</h3>
-                        <p class="text-hippie-blue mb-4">Site vitrine moderne avec blog intégré pour une entreprise</p>
-                        <a href="#" class="text-scooter font-medium hover:text-white flex items-center">
-                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12" data-aos="fade-up">
-                <a href="#" class="inline-flex items-center bg-scooter text-white px-6 py-3 rounded-md font-medium hover:bg-pacific-blue transition">
-                    <i class="fas fa-images mr-2"></i> Voir tous nos projets
-                </a>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="text-scooter font-semibold">NOS RÉALISATIONS</span>
+          <h2 class="text-3xl font-bold text-tarawera mt-2">
+            Découvrez nos projets récents
+          </h2>
+          <p class="text-blumine max-w-2xl mx-auto mt-4">
+            Nous avons travaillé avec des entreprises de toutes tailles dans
+            divers secteurs d'activité.
+          </p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+            data-aos="zoom-in"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+              alt="Site e-commerce"
+              class="w-full h-64 object-cover"
+            />
+            <div
+              class="project-overlay absolute inset-0 bg-gradient-to-t from-tarawera to-transparent p-6 flex flex-col justify-end"
+            >
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Plateforme E-commerce
+              </h3>
+              <p class="text-hippie-blue mb-4">
+                Solution complète avec paiement en ligne et gestion de stocks
+              </p>
+              <a
+                href="#"
+                class="text-scooter font-medium hover:text-white flex items-center"
+              >
+                Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+              alt="Application mobile"
+              class="w-full h-64 object-cover"
+            />
+            <div
+              class="project-overlay absolute inset-0 bg-gradient-to-t from-tarawera to-transparent p-6 flex flex-col justify-end"
+            >
+              <h3 class="text-xl font-semibold text-white mb-2">
+                App Mobile de Livraison
+              </h3>
+              <p class="text-hippie-blue mb-4">
+                Application avec suivi GPS en temps réel pour iOS et Android
+              </p>
+              <a
+                href="#"
+                class="text-scooter font-medium hover:text-white flex items-center"
+              >
+                Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+              alt="Site corporate"
+              class="w-full h-64 object-cover"
+            />
+            <div
+              class="project-overlay absolute inset-0 bg-gradient-to-t from-tarawera to-transparent p-6 flex flex-col justify-end"
+            >
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Site Corporate
+              </h3>
+              <p class="text-hippie-blue mb-4">
+                Site vitrine moderne avec blog intégré pour une entreprise
+              </p>
+              <a
+                href="#"
+                class="text-scooter font-medium hover:text-white flex items-center"
+              >
+                Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12" data-aos="fade-up">
+          <a
+            href="#"
+            class="inline-flex items-center bg-scooter text-white px-6 py-3 rounded-md font-medium hover:bg-pacific-blue transition"
+          >
+            <i class="fas fa-images mr-2"></i> Voir tous nos projets
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="temoignages" class="py-20 bg-gradient-to-b from-catalina-blue to-science-blue text-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-scooter font-semibold">TÉMOIGNAGES</span>
-                <h2 class="text-3xl font-bold mt-2">Ce que disent nos clients</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center mb-4">
-                        <div class="text-scooter mr-4 text-3xl">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="italic">"Webinova a transformé notre présence en ligne. Notre trafic a augmenté de 300% en 6 mois grâce à leur stratégie SEO."</p>
-                    </div>
-                    <div class="flex items-center pt-4 border-t border-white border-opacity-20">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
-                             class="w-12 h-12 rounded-full mr-3 border-2 border-scooter" 
-                             alt="Mohamed Ali">
-                        <div>
-                            <h4 class="font-semibold">Mohamed Ali</h4>
-                            <p class="text-sm opacity-80">CEO, Entreprise XYZ</p>
-                            <div class="flex text-yellow-400 mt-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center mb-4">
-                        <div class="text-scooter mr-4 text-3xl">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="italic">"L'application mobile développée par Webinova a dépassé nos attentes. Interface intuitive et performances impeccables."</p>
-                    </div>
-                    <div class="flex items-center pt-4 border-t border-white border-opacity-20">
-                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
-                             class="w-12 h-12 rounded-full mr-3 border-2 border-scooter" 
-                             alt="Sarah Ben">
-                        <div>
-                            <h4 class="font-semibold">Sarah Ben</h4>
-                            <p class="text-sm opacity-80">Directrice Marketing, Startup ABC</p>
-                            <div class="flex text-yellow-400 mt-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center mb-4">
-                        <div class="text-scooter mr-4 text-3xl">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="italic">"Un service client exceptionnel et des résultats concrets. Notre site e-commerce génère maintenant 50% de revenus en plus."</p>
-                    </div>
-                    <div class="flex items-center pt-4 border-t border-white border-opacity-20">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
-                             class="w-12 h-12 rounded-full mr-3 border-2 border-scooter" 
-                             alt="Karim Jlassi">
-                        <div>
-                            <h4 class="font-semibold">Karim Jlassi</h4>
-                            <p class="text-sm opacity-80">Gérant, Boutique en ligne</p>
-                            <div class="flex text-yellow-400 mt-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section
+      id="temoignages"
+      class="py-20 bg-gradient-to-b from-catalina-blue to-science-blue text-white"
+    >
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="text-scooter font-semibold">TÉMOIGNAGES</span>
+          <h2 class="text-3xl font-bold mt-2">Ce que disent nos clients</h2>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="testimonial-card p-6 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-scooter mr-4 text-3xl">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="italic">
+                "Webinova a transformé notre présence en ligne. Notre trafic a
+                augmenté de 300% en 6 mois grâce à leur stratégie SEO."
+              </p>
+            </div>
+            <div
+              class="flex items-center pt-4 border-t border-white border-opacity-20"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                class="w-12 h-12 rounded-full mr-3 border-2 border-scooter"
+                alt="Mohamed Ali"
+              />
+              <div>
+                <h4 class="font-semibold">Mohamed Ali</h4>
+                <p class="text-sm opacity-80">CEO, Entreprise XYZ</p>
+                <div class="flex text-yellow-400 mt-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="testimonial-card p-6 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-scooter mr-4 text-3xl">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="italic">
+                "L'application mobile développée par Webinova a dépassé nos
+                attentes. Interface intuitive et performances impeccables."
+              </p>
+            </div>
+            <div
+              class="flex items-center pt-4 border-t border-white border-opacity-20"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                class="w-12 h-12 rounded-full mr-3 border-2 border-scooter"
+                alt="Sarah Ben"
+              />
+              <div>
+                <h4 class="font-semibold">Sarah Ben</h4>
+                <p class="text-sm opacity-80">
+                  Directrice Marketing, Startup ABC
+                </p>
+                <div class="flex text-yellow-400 mt-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="testimonial-card p-6 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-scooter mr-4 text-3xl">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="italic">
+                "Un service client exceptionnel et des résultats concrets. Notre
+                site e-commerce génère maintenant 50% de revenus en plus."
+              </p>
+            </div>
+            <div
+              class="flex items-center pt-4 border-t border-white border-opacity-20"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                class="w-12 h-12 rounded-full mr-3 border-2 border-scooter"
+                alt="Karim Jlassi"
+              />
+              <div>
+                <h4 class="font-semibold">Karim Jlassi</h4>
+                <p class="text-sm opacity-80">Gérant, Boutique en ligne</p>
+                <div class="flex text-yellow-400 mt-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Process Section -->
     <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-scooter font-semibold">NOTRE PROCESSUS</span>
-                <h2 class="text-3xl font-bold text-tarawera mt-2">Comment nous travaillons</h2>
-                <p class="text-blumine max-w-2xl mx-auto mt-4">
-                    Une méthodologie éprouvée pour garantir le succès de votre projet digital.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Step 1 -->
-                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-scooter text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
-                    <h3 class="text-xl font-semibold text-tarawera mb-2">Écoute & Analyse</h3>
-                    <p class="text-blumine">
-                        Nous analysons vos besoins et vos objectifs pour proposer la meilleure solution.
-                    </p>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-scooter text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
-                    <h3 class="text-xl font-semibold text-tarawera mb-2">Conception</h3>
-                    <p class="text-blumine">
-                        Création des maquettes et validation des parcours utilisateurs.
-                    </p>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-scooter text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
-                    <h3 class="text-xl font-semibold text-tarawera mb-2">Développement</h3>
-                    <p class="text-blumine">
-                        Implémentation technique avec des technologies modernes et performantes.
-                    </p>
-                </div>
-                
-                <!-- Step 4 -->
-                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="bg-scooter text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
-                    <h3 class="text-xl font-semibold text-tarawera mb-2">Livraison & Suivi</h3>
-                    <p class="text-blumine">
-                        Mise en production et accompagnement pour optimiser les résultats.
-                    </p>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="text-scooter font-semibold">NOTRE PROCESSUS</span>
+          <h2 class="text-3xl font-bold text-tarawera mt-2">
+            Comment nous travaillons
+          </h2>
+          <p class="text-blumine max-w-2xl mx-auto mt-4">
+            Une méthodologie éprouvée pour garantir le succès de votre projet
+            digital.
+          </p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="bg-scooter text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-semibold text-tarawera mb-2">
+              Écoute & Analyse
+            </h3>
+            <p class="text-blumine">
+              Nous analysons vos besoins et vos objectifs pour proposer la
+              meilleure solution.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="bg-scooter text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-semibold text-tarawera mb-2">Conception</h3>
+            <p class="text-blumine">
+              Création des maquettes et validation des parcours utilisateurs.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="bg-scooter text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-semibold text-tarawera mb-2">
+              Développement
+            </h3>
+            <p class="text-blumine">
+              Implémentation technique avec des technologies modernes et
+              performantes.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div
+              class="bg-scooter text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+            >
+              4
+            </div>
+            <h3 class="text-xl font-semibold text-tarawera mb-2">
+              Livraison & Suivi
+            </h3>
+            <p class="text-blumine">
+              Mise en production et accompagnement pour optimiser les résultats.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
     <section class="py-20 bg-scooter text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Prêt à booster votre présence digitale ?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis gratuit.
-            </p>
-            <a href="#contact" class="inline-flex items-center bg-white text-scooter px-8 py-3 rounded-md font-semibold hover:bg-opacity-90 transition" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-paper-plane mr-2"></i> Demander un devis
-            </a>
-        </div>
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">
+          Prêt à booster votre présence digitale ?
+        </h2>
+        <p
+          class="text-xl mb-8 max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Contactez-nous dès aujourd'hui pour discuter de votre projet et
+          obtenir un devis gratuit.
+        </p>
+        <a
+          href="#contact"
+          class="inline-flex items-center bg-white text-scooter px-8 py-3 rounded-md font-semibold hover:bg-opacity-90 transition"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <i class="fas fa-paper-plane mr-2"></i> Demander un devis
+        </a>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                    <h2 class="text-3xl font-bold text-tarawera mb-6">Contactez-nous</h2>
-                    <p class="text-blumine mb-8">
-                        Vous avez un projet digital ? Parlons-en ! Notre équipe est à votre écoute pour répondre 
-                        à toutes vos questions et vous proposer la solution adaptée à vos besoins.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="text-scooter mr-4 mt-1 text-xl">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-tarawera">Téléphone</h4>
-                                <p class="text-blumine">+216 XX XXX XXX</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="text-scooter mr-4 mt-1 text-xl">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-tarawera">Email</h4>
-                                <p class="text-blumine">contact@webinova.tn</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="text-scooter mr-4 mt-1 text-xl">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-tarawera">Adresse</h4>
-                                <p class="text-blumine">Tunis, Tunisie</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start pt-6">
-                            <div class="text-scooter mr-4 mt-1 text-xl">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-tarawera">Heures d'ouverture</h4>
-                                <p class="text-blumine">Lundi - Vendredi: 9h - 18h</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-10">
-                        <h4 class="font-semibold text-tarawera mb-4">Suivez-nous</h4>
-                        <div class="flex space-x-4">
-                            <a href="#" class="bg-catskill-white text-scooter w-10 h-10 rounded-full flex items-center justify-center hover:bg-scooter hover:text-white transition">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="bg-catskill-white text-scooter w-10 h-10 rounded-full flex items-center justify-center hover:bg-scooter hover:text-white transition">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="bg-catskill-white text-scooter w-10 h-10 rounded-full flex items-center justify-center hover:bg-scooter hover:text-white transition">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="bg-catskill-white text-scooter w-10 h-10 rounded-full flex items-center justify-center hover:bg-scooter hover:text-white transition">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                        </div>
-                    </div>
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+            <h2 class="text-3xl font-bold text-tarawera mb-6">
+              Contactez-nous
+            </h2>
+            <p class="text-blumine mb-8">
+              Vous avez un projet digital ? Parlons-en ! Notre équipe est à
+              votre écoute pour répondre à toutes vos questions et vous proposer
+              la solution adaptée à vos besoins.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="text-scooter mr-4 mt-1 text-xl">
+                  <i class="fas fa-phone-alt"></i>
                 </div>
-                
-                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
-                    <form class="bg-catskill-white p-8 rounded-lg shadow-md">
-                        <div class="mb-6">
-                            <label for="name" class="block text-tarawera font-medium mb-2">Nom complet *</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-scooter" required>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="email" class="block text-tarawera font-medium mb-2">Email *</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-scooter" required>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="phone" class="block text-tarawera font-medium mb-2">Téléphone</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-scooter">
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="service" class="block text-tarawera font-medium mb-2">Service intéressé *</label>
-                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-scooter" required>
-                                <option value="">Sélectionnez un service</option>
-                                <option value="website">Site Web</option>
-                                <option value="app">Application Mobile</option>
-                                <option value="seo">SEO</option>
-                                <option value="ads">Campagnes Sponsor.</option>
-                                <option value="multiple">Plusieurs services</option>
-                            </select>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="message" class="block text-tarawera font-medium mb-2">Message *</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-scooter" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-scooter text-white py-3 rounded-md font-medium hover:bg-pacific-blue transition flex items-center justify-center">
-                            <i class="fas fa-paper-plane mr-2"></i> Envoyer le message
-                        </button>
-                    </form>
+                <div>
+                  <h4 class="font-semibold text-tarawera">Téléphone</h4>
+                  <p class="text-blumine">+216 XX XXX XXX</p>
                 </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="text-scooter mr-4 mt-1 text-xl">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-tarawera">Email</h4>
+                  <p class="text-blumine">contact@webinova.tn</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="text-scooter mr-4 mt-1 text-xl">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-tarawera">Adresse</h4>
+                  <p class="text-blumine">Tunis, Tunisie</p>
+                </div>
+              </div>
+
+              <div class="flex items-start pt-6">
+                <div class="text-scooter mr-4 mt-1 text-xl">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-tarawera">
+                    Heures d'ouverture
+                  </h4>
+                  <p class="text-blumine">Lundi - Vendredi: 9h - 18h</p>
+                </div>
+              </div>
             </div>
+
+            <div class="mt-10">
+              <h4 class="font-semibold text-tarawera mb-4">Suivez-nous</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="bg-catskill-white text-scooter w-10 h-10 rounded-full flex items-center justify-center hover:bg-scooter hover:text-white transition"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-catskill-white text-scooter w-10 h-10 rounded-full flex items-center justify-center hover:bg-scooter hover:text-white transition"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-catskill-white text-scooter w-10 h-10 rounded-full flex items-center justify-center hover:bg-scooter hover:text-white transition"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-catskill-white text-scooter w-10 h-10 rounded-full flex items-center justify-center hover:bg-scooter hover:text-white transition"
+                >
+                  <i class="fab fa-behance"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+            <form class="bg-catskill-white p-8 rounded-lg shadow-md">
+              <div class="mb-6">
+                <label for="name" class="block text-tarawera font-medium mb-2"
+                  >Nom complet *</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-scooter"
+                  required
+                />
+              </div>
+
+              <div class="mb-6">
+                <label for="email" class="block text-tarawera font-medium mb-2"
+                  >Email *</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-scooter"
+                  required
+                />
+              </div>
+
+              <div class="mb-6">
+                <label for="phone" class="block text-tarawera font-medium mb-2"
+                  >Téléphone</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-scooter"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label
+                  for="service"
+                  class="block text-tarawera font-medium mb-2"
+                  >Service intéressé *</label
+                >
+                <select
+                  id="service"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-scooter"
+                  required
+                >
+                  <option value="">Sélectionnez un service</option>
+                  <option value="website">Site Web</option>
+                  <option value="app">Application Mobile</option>
+                  <option value="seo">SEO</option>
+                  <option value="ads">Campagnes Sponsor.</option>
+                  <option value="multiple">Plusieurs services</option>
+                </select>
+              </div>
+
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-tarawera font-medium mb-2"
+                  >Message *</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-scooter"
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-scooter text-white py-3 rounded-md font-medium hover:bg-pacific-blue transition flex items-center justify-center"
+              >
+                <i class="fas fa-paper-plane mr-2"></i> Envoyer le message
+              </button>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-tarawera text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between">
-                <div class="mb-8 md:mb-0">
-                    <h3 class="text-2xl font-bold mb-4 flex items-center">
-                        <span class="bg-scooter text-white p-2 rounded mr-2">
-                            <i class="fas fa-rocket"></i>
-                        </span>
-                        WEBINOVA
-                    </h3>
-                    <p class="max-w-xs text-hippie-blue">
-                        L'innovation web sans limites. Agence digitale tunisienne spécialisée en création 
-                        de sites web, applications mobiles, SEO et campagnes sponsorisées.
-                    </p>
-                </div>
-                
-                <div class="mb-8 md:mb-0">
-                    <h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#services" class="text-hippie-blue hover:text-scooter transition">Services</a></li>
-                        <li><a href="#apropos" class="text-hippie-blue hover:text-scooter transition">À propos</a></li>
-                        <li><a href="#portfolio" class="text-hippie-blue hover:text-scooter transition">Portfolio</a></li>
-                        <li><a href="#temoignages" class="text-hippie-blue hover:text-scooter transition">Témoignages</a></li>
-                        <li><a href="#contact" class="text-hippie-blue hover:text-scooter transition">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="mb-8 md:mb-0">
-                    <h4 class="text-lg font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-hippie-blue hover:text-scooter transition">Sites Web</a></li>
-                        <li><a href="#" class="text-hippie-blue hover:text-scooter transition">Apps Mobiles</a></li>
-                        <li><a href="#" class="text-hippie-blue hover:text-scooter transition">SEO</a></li>
-                        <li><a href="#" class="text-hippie-blue hover:text-scooter transition">Campagnes Sponsor.</a></li>
-                        <li><a href="#" class="text-hippie-blue hover:text-scooter transition">Stratégie Digitale</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contactez-nous</h4>
-                    <ul class="space-y-2 text-hippie-blue">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-scooter"></i>
-                            <span>Tunis, Tunisie</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-phone-alt mt-1 mr-2 text-scooter"></i>
-                            <span>+216 XX XXX XXX</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-envelope mt-1 mr-2 text-scooter"></i>
-                            <span>contact@webinova.tn</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-hippie-blue border-opacity-30 mt-8 pt-8 text-center text-hippie-blue">
-                <p>&copy; 2023 Webinova. Tous droits réservés.</p>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-8 md:mb-0">
+            <h3 class="text-2xl font-bold mb-4 flex items-center">
+              <span class="bg-scooter text-white p-2 rounded mr-2">
+                <i class="fas fa-rocket"></i>
+              </span>
+              WEBINOVA
+            </h3>
+            <p class="max-w-xs text-hippie-blue">
+              L'innovation web sans limites. Agence digitale tunisienne
+              spécialisée en création de sites web, applications mobiles, SEO et
+              campagnes sponsorisées.
+            </p>
+          </div>
+
+          <div class="mb-8 md:mb-0">
+            <h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#services"
+                  class="text-hippie-blue hover:text-scooter transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#apropos"
+                  class="text-hippie-blue hover:text-scooter transition"
+                  >À propos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="text-hippie-blue hover:text-scooter transition"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#temoignages"
+                  class="text-hippie-blue hover:text-scooter transition"
+                  >Témoignages</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-hippie-blue hover:text-scooter transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="mb-8 md:mb-0">
+            <h4 class="text-lg font-semibold mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-hippie-blue hover:text-scooter transition"
+                  >Sites Web</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-hippie-blue hover:text-scooter transition"
+                  >Apps Mobiles</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-hippie-blue hover:text-scooter transition"
+                  >SEO</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-hippie-blue hover:text-scooter transition"
+                  >Campagnes Sponsor.</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-hippie-blue hover:text-scooter transition"
+                  >Stratégie Digitale</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contactez-nous</h4>
+            <ul class="space-y-2 text-hippie-blue">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-2 text-scooter"></i>
+                <span>Tunis, Tunisie</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone-alt mt-1 mr-2 text-scooter"></i>
+                <span>+216 XX XXX XXX</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-2 text-scooter"></i>
+                <span>contact@webinova.tn</span>
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <div
+          class="border-t border-hippie-blue border-opacity-30 mt-8 pt-8 text-center text-hippie-blue"
+        >
+          <p>&copy; 2023 Webinova. Tous droits réservés.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-scooter text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-pacific-blue transition hidden">
-        <i class="fas fa-arrow-up"></i>
+    <a
+      href="#"
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-scooter text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-pacific-blue transition hidden"
+    >
+      <i class="fas fa-arrow-up"></i>
     </a>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS animation
-        AOS.init({
-            duration: 800,
-            once: true,
-            easing: 'ease-in-out'
+      // Initialize AOS animation
+      AOS.init({
+        duration: 800,
+        once: true,
+        easing: "ease-in-out",
+      });
+
+      // Mobile menu toggle
+      document
+        .getElementById("menu-btn")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
         });
-        
-        // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-        
-        // Back to top button
-        window.addEventListener('scroll', function() {
-            const backToTop = document.getElementById('back-to-top');
-            if (window.pageYOffset > 300) {
-                backToTop.classList.remove('hidden');
-            } else {
-                backToTop.classList.add('hidden');
-            }
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
+
+      // Back to top button
+      window.addEventListener("scroll", function () {
+        const backToTop = document.getElementById("back-to-top");
+        if (window.pageYOffset > 300) {
+          backToTop.classList.remove("hidden");
+        } else {
+          backToTop.classList.add("hidden");
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
             });
+
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            }
+          }
         });
+      });
     </script>
-</body>
+  </body>
 </html>
